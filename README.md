@@ -1,1 +1,1 @@
-# Password Generator Starter Code
+# Password Generator with prompts to meet acceptance criteria
