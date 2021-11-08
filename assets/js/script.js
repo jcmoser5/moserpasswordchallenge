@@ -18,6 +18,47 @@ function generatePassword() {
   var resultArray = [];
   var userArray = [];
 
+  uppercaseArray [1]
+
+
+  var numCharacter = prompt ("How many characters would you like to include? Min 8 Max 128.");
+  var lowercase = confirm ("Would you like to include any lowercase characters? Hit cancel for no");
+  var uppercase = confirm ("Would you like to include any uppercase characters? Hit cancel for no");
+  var numbers = confirm ("Would you like to include any numbers? Hit cancel for no");
+  var characters = confirm ("Would you like to include any special characters? Hit cancel for no");
+
+  // check array
+
+
+if (lowercase){
+  resultArray = resultArray.concat(lowercaseArray);
+
+}
+
+if (uppercase){
+  resultArray = resultArray.concat(uppercaseArray);
+
+}
+
+if (numbers){
+  resultArray = resultArray.concat(numbArray);
+  
+}
+
+if (characters){
+  resultArray = resultArray.concat(characterArray);
+}
+console.log(resultArray)
+
+
+for (var i = 0; i < numCharacter; i++) {
+      
+  userArray.push (resultArray[Math.floor(Math.random() * resultArray.length)]); 
+  }
+
+  return userArray.join("") ;
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
